@@ -1,9 +1,15 @@
 // Imports
-
+// Utils
+@import "Sass/Utils/variables";
 // Base
 @import "Sass/Base/reset";
+@import "Sass/Base/style";
 // Components
 @import "Sass/Components/button";
+// Layout
 @import "Sass/Layout/footer";
 @import "Sass/Layout/header";
-// ...
+@import "Sass/Layout/main";
+@import "Sass/Layout/subheader";
+@import "Sass/Layout/spinner";
+@import "Sass/Layout/hero";

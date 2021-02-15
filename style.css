@@ -1,20 +1,89 @@
+/* Couleurs */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,17 +111,25 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+a:link {
+  text-decoration: none;
+}
+
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -52,7 +138,310 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+}
+
+#body {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Roboto";
+}
+
 button {
-  background: blue;
+  background-image: linear-gradient(135deg, #FF79DA, #9356DC);
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  margin: 3% 20% 9% 22%;
+  width: 55%;
+  -webkit-box-shadow: 0 5px 16px #0000002e;
+          box-shadow: 0 5px 16px #0000002e;
+}
+
+button a {
+  color: white;
+  padding: 10px;
+}
+
+.footer {
+  background-color: grey;
+  padding: 18px 0px 18px 24px;
+  margin-top: 50px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__title {
+  font-size: 20px;
+  font-family: "shrikhand";
+}
+
+.footer__content {
+  margin-top: 15px;
+}
+
+.footer__content__subtitle {
+  margin-bottom: 8px;
+}
+
+.footer__content__link1 {
+  padding-left: 7px;
+}
+
+.footer__content .fas {
+  margin-right: 10px;
+  color: white;
+}
+
+.header {
+  padding: 15PX 0 8px 0PX;
+  -webkit-box-shadow: 0 0 16px 0  #0000002e;
+          box-shadow: 0 0 16px 0  #0000002e;
+  text-align: center;
+}
+
+.header__image {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section__title {
+  padding: 28px 0px 8px 26px;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.section--fonctionnement .step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: 0 5px 16px #0000002e;
+          box-shadow: 0 5px 16px #0000002e;
+  width: 79%;
+  margin: 5% 10%;
+  border-radius: 16px;
+  height: 44px;
+  position: relative;
+}
+
+.section--fonctionnement .step__number {
+  padding: 1px 5px;
+  color: white;
+  background-color: #9356dc;
+  border-radius: 10px;
+  height: 17px;
+  position: absolute;
+  left: -8px;
+  margin-top: 11px;
+}
+
+.section--fonctionnement .step__icon {
+  color: GREY;
+  font-size: 16px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+}
+
+.section--fonctionnement .step__content {
+  padding: 13px 15px 0px;
+}
+
+.section--fonctionnement .step__text {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.section--restaurants .resto {
+  border-radius: 15px;
+  width: 88%;
+  margin: 12px 0px 24px 21px;
+  height: 205px;
+  -webkit-box-shadow: 0 5px 16px #0000002e;
+          box-shadow: 0 5px 16px #0000002e;
+  position: relative;
+}
+
+.section--restaurants .resto__image img {
+  width: 100%;
+  height: 134px;
+  border-radius: 14px 14px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section--restaurants .resto__content {
+  display: -ms-grid;
+  display: grid;
+  padding: 5px 181px 0px 0px;
+  color: black;
+  padding: 10px 0px 0px 13px;
+}
+
+.section--restaurants .resto__title {
+  font-weight: 800;
+}
+
+.section--restaurants .resto__subtitle {
+  padding: 8px 22px 0PX 0Px;
+}
+
+.section--restaurants .resto__new {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  background: LIGHTGREY;
+  padding: 4px 13px;
+  font-size: 14px;
+  color: MEDIUMSEAGREEN;
+  font-weight: 800;
+}
+
+.section--restaurants .resto__heart {
+  position: absolute;
+  right: 28px;
+  bottom: 30px;
+  font-size: 25px;
+}
+
+.subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99E2D0;
+}
+
+.subheader__iconemap {
+  margin: 10px 10px 10px 0px;
+}
+
+.subheader__content {
+  margin: 10px 10px 5px 0px;
+}
+
+.subheader__content a {
+  color: black;
+}
+
+/*LOADER*/
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #9356dc;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #9356dc), color-stop(42%, rgba(137, 86, 220, 0)));
+  background: linear-gradient(to right, #9356dc 10%, rgba(137, 86, 220, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #9356dc;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: #FF79DA;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.hero {
+  background: whitesmoke;
+  margin-top: 0px;
+  margin: -16px 0 0px 0;
+}
+
+.hero__content {
+  color: black;
+  font-family: "Roboto";
+}
+
+.hero__title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 15px 0px 10px 0px;
+  font-size: 20px;
+  font-weight: 800;
+  padding-top: 22px;
+}
+
+.hero__subtitle {
+  text-align: center;
+  margin: 0px 15px 10px;
 }
 /*# sourceMappingURL=style.css.map */

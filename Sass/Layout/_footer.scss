@@ -1,0 +1,32 @@
+.footer {
+  background-color: grey;
+  padding: 18px 0px 18px 24px;
+  margin-top: 50px;
+  a {
+    color: white;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-family: "shrikhand";
+  }
+  &__content {
+    margin-top: 15px;
+    &__subtitle {
+      margin-bottom: 8px;
+    }
+    &__link1 {
+      padding-left: 7px;
+    }
+    .fas {
+      margin-right: 10px;
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) /* TABLETTE */ {
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) /* GRAND ECRAN */ {
+}

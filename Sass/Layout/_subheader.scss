@@ -1,8 +1,18 @@
 .subheader{
+ 
+    display: flex;
+    justify-content: center;
+    background-color: $tertiaire;
+
     &__iconemap{
-
+        margin: 10px 10px 10px 0px;
     }
-    &__content{
 
-    }
+        &__content{
+            margin: 10px 10px 5px 0px;
+         a{
+            color: black;
+        }
+    
+        }
 }

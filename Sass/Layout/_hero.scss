@@ -1,10 +1,22 @@
-.hero{
-    &__content{
-        
-        &__title{}
+.hero {
+  background: whitesmoke;
+  margin-top: 0px;
+  margin: -16px 0 0px 0;
+  &__content {
+    color: black;
+    font-family: "Roboto";
+  }
+  &__title {
+    justify-content: center;
+    text-align: center;
+    margin: 15px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 22px;
+  }
 
-        &__subtitle{}
-
-    }
-    
+  &__subtitle {
+    text-align: center;
+    margin: 0px 15px 10px;
+  }
 }

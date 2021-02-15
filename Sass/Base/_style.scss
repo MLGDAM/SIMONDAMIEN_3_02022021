@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
+}
+
+@font-face {
+  font-family: "shrikhand";
+  src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
+}
+
+#body {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Roboto";
+}

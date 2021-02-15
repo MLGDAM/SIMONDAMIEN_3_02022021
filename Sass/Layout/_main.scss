@@ -1,0 +1,93 @@
+.section {
+  &__title {
+    padding: 28px 0px 8px 26px;
+    font-weight: 800;
+    font-size: 22px;
+  }
+  &--fonctionnement {
+    .step {
+      display: flex;
+      justify-content: flex-start;
+      box-shadow: 0 5px 16px #0000002e;
+      width: 79%;
+      margin: 5% 10%;
+      border-radius: 16px;
+      height: 44px;
+      position: relative;
+
+      &__number {
+        padding: 1px 5px;
+        color: white;
+        background-color: #9356dc;
+        border-radius: 10px;
+        height: 17px;
+        position: absolute;
+        left: -8px;
+        margin-top: 11px;
+      }
+      &__icon {
+        color: GREY;
+        font-size: 16px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+      }
+      &__content{
+        padding: 13px 15px 0px;
+      } 
+      &__text {
+        font-weight: 600;
+        font-size: 14px;
+      
+    }
+    }
+  }
+
+  &--restaurants {
+    .resto {
+      border-radius: 15px;
+      width: 88%;
+      margin: 12px 0px 24px 21px;
+      height: 205px;
+      box-shadow: 0 5px 16px #0000002e;
+      position: relative;
+
+      &__image img {
+        width: 100%;
+        height: 134px;
+        border-radius: 14px 14px 0px 0px;
+        object-fit: cover;
+      }
+      &__content {
+        display: grid;
+        padding: 5px 181px 0px 0px;
+        color: black;
+        padding: 10px 0px 0px 13px;
+      }
+      &__title{
+        font-weight: 800;
+      }
+       &__subtitle{
+        padding: 8px 22px 0PX 0Px
+      }
+      &__new {
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        background: LIGHTGREY;
+        padding: 4px 13px;
+        font-size: 14px;
+        color: MEDIUMSEAGREEN;
+        font-weight: 800;
+      }
+      &__heart {
+        position: absolute;
+        right: 28px;
+        bottom: 30px;
+        font-size: 25px;
+      }
+    }
+  }
+}
