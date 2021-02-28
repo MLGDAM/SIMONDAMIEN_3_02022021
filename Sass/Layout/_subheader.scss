@@ -4,6 +4,16 @@
     justify-content: center;
     background-color: $tertiaire;
 
+    &__image{
+        width: 100%;
+
+        &--mod{
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
     &__iconemap{
         margin: 10px 10px 10px 0px;
     }

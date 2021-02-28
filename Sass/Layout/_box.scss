@@ -1,0 +1,66 @@
+.box {
+  &__menu {
+    &__title {
+      margin: 24px 0px 8px 18px;
+      border-bottom: 3px solid #99e2d0;
+      padding-bottom: 6px;
+      width: 11%;
+    }
+  }
+
+  &__element {
+    border-radius: 10px;
+    background-color: white;
+    width: 92%;
+    display: block;
+    margin-left: auto; /*centré*/
+    margin-right: auto;
+    margin-top: 12px;
+    box-shadow: 0 5px 16px #0000002e;
+    position: relative;
+  }
+
+  &__contents {
+    position: relative;
+    padding: 10px 0px 10px 10px;
+    &:hover .box__check {
+      width: 40px;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    &__title {
+      font-weight: 800;
+    }
+
+    &__inline {
+      display: flex;
+      padding-top: 5px;
+
+      &__subtitle {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      &__price{
+        position: absolute;
+        right: 5%;
+    }
+      }
+    }
+  
+
+  &__check {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 0px;
+    height: 100%;
+    background: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    right: 0px;
+  }
+}

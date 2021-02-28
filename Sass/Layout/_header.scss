@@ -1,9 +1,32 @@
-.header{
-    padding: 15PX 0 8px 0PX;
-    box-shadow: 0 0 16px 0  #0000002e;
-    text-align: center;
-    &__image {
-        justify-content: center;
-  
+.header {
+  padding: 15px 0 8px 0px;
+  box-shadow: 0 0 16px 0 #0000002e;
+  text-align: center;
+  &__image {
+    justify-content: center;
+  }
+}
+
+.header1 {
+    display: flex;
+    justify-content: center;
+    margin: 13px 0px 10px 0px;
+
+  &__back {
+    font-size: 19px;
+    position: absolute;
+    left: 20px;
+    top: 18px;
+
+    a {
+      color: black;
     }
+  }
+  &__title {
+    a {
+      font-family: "Shrikhand", sans-serif;
+      font-size: 28px;
+      color: black;
+    }
+  }
 }
