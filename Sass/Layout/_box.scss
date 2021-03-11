@@ -21,8 +21,7 @@
   }
 
   &__contents {
-    position: relative;
-    padding: 10px 0px 10px 10px;
+    display: flex;
     &:hover .box__check {
       width: 40px;
       border-radius: 0px 10px 10px 0px;
@@ -32,6 +31,11 @@
       font-weight: 800;
     }
 
+    &__left {
+      width: 100%;
+      padding: 0.8em;
+      position: relative;
+    }
     &__inline {
       display: flex;
       padding-top: 5px;
@@ -41,17 +45,16 @@
         white-space: nowrap;
         overflow: hidden;
       }
-      &__price{
+      &__price {
         position: absolute;
         right: 5%;
-    }
       }
     }
-  
+  }
 
   &__check {
-    position: absolute;
-    right: 10px;
+    height: 100%;
+    right: 0px;
     top: 0;
     width: 0px;
     height: 100%;
@@ -61,6 +64,33 @@
     align-items: center;
     overflow: hidden;
     transition: all 0.3s ease;
-    right: 0px;
   }
 }
+
+
+/*page de détail*/
+@media (min-width: 450px) and (max-width: 767px){
+  .box{
+    &__element{
+      width: 350px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+.box{
+  display: flex;
+  &__menu{
+    width: calc(33.3% - 2px);
+  }
+}
+}
+
+@media (min-width: 1025px){
+  .box{
+    display: flex;
+    &__menu{
+      width: calc(33.3% - 2px);
+    }
+  }
+  }

@@ -24,8 +24,11 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) /* TABLETTE */ {
-}
 
-@media (min-width: 1025px) and (max-width: 1600px) /* GRAND ECRAN */ {
+
+@media (min-width: 450px){
+  .footer{
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+  }
 }

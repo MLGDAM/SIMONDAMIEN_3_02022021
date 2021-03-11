@@ -1,4 +1,69 @@
 @charset "UTF-8";
+/*LOADER*/
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #9356dc;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #9356dc), color-stop(42%, rgba(137, 86, 220, 0)));
+  background: linear-gradient(to right, #9356dc 10%, rgba(137, 86, 220, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #9356dc;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+.loader:after {
+  background: #FF79DA;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /* Couleurs */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -170,7 +235,7 @@ button {
   border-radius: 20px;
   height: 40px;
   border: none;
-  width: 55%;
+  width: 230px;
   -webkit-box-shadow: 0 5px 16px #0000002e;
           box-shadow: 0 5px 16px #0000002e;
   display: block;
@@ -213,6 +278,13 @@ button a {
 .footer__content .fas {
   margin-right: 10px;
   color: white;
+}
+
+@media (min-width: 450px) {
+  .footer {
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+  }
 }
 
 .header {
@@ -275,10 +347,10 @@ button a {
           justify-content: flex-start;
   -webkit-box-shadow: 0 5px 16px #0000002e;
           box-shadow: 0 5px 16px #0000002e;
-  width: 79%;
+  width: 300px;
   margin: 5% 10%;
   border-radius: 16px;
-  height: 44px;
+  height: 62px;
   position: relative;
 }
 
@@ -290,7 +362,6 @@ button a {
   height: 17px;
   position: absolute;
   left: -8px;
-  margin-top: 11px;
 }
 
 .section--fonctionnement .step__icon {
@@ -310,7 +381,15 @@ button a {
 }
 
 .section--fonctionnement .step__content {
-  padding: 13px 15px 0px;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .section--fonctionnement .step__text {
@@ -374,6 +453,81 @@ button a {
   font-size: 25px;
 }
 
+/* Responsive */
+@media (min-width: 250px) and (max-width: 350px) {
+  .section--fonctionnement .step {
+    width: 80%;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 1601px) {
+  .section__title {
+    padding: 28px 0px 7px 0px;
+    text-align: center;
+  }
+  .section .step {
+    margin: 20px auto 20px auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section--restaurants .transform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section--restaurants .resto {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .section--restaurants .transform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .section--restaurants .resto {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: calc(33.3% - 10px);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .section__title {
+    padding: 28px 0px 7px 0px;
+    text-align: center;
+  }
+  .section .step {
+    margin: 20px auto 20px auto;
+  }
+  .section--restaurants {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section--restaurants .transform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .section--restaurants .resto {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: calc(33.3% - 10px);
+    margin: 15px;
+  }
+}
+
+/* Page de Détail */
 .main {
   padding-bottom: 40px;
   background-color: whitesmoke;
@@ -401,6 +555,14 @@ button a {
   padding: 0px 44px 0px 0px;
 }
 
+@media (min-width: 1025px) {
+  .main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .subheader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,6 +575,10 @@ button a {
 
 .subheader__image {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30vh;
 }
 
 .subheader__image--mod {
@@ -432,6 +598,12 @@ button a {
 
 .subheader__content a {
   color: black;
+}
+
+@media (min-width: 1025px) {
+  .subheader__image {
+    height: 50vh;
+  }
 }
 
 /*LOADER*/
@@ -549,8 +721,9 @@ button a {
 }
 
 .box__contents {
-  position: relative;
-  padding: 10px 0px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .box__contents:hover .box__check {
@@ -560,6 +733,12 @@ button a {
 
 .box__contents__title {
   font-weight: 800;
+}
+
+.box__contents__left {
+  width: 100%;
+  padding: 0.8em;
+  position: relative;
 }
 
 .box__contents__inline {
@@ -581,8 +760,8 @@ button a {
 }
 
 .box__check {
-  position: absolute;
-  right: 10px;
+  height: 100%;
+  right: 0px;
   top: 0;
   width: 0px;
   height: 100%;
@@ -599,12 +778,40 @@ button a {
   overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  right: 0px;
+}
+
+/*page de détail*/
+@media (min-width: 450px) and (max-width: 767px) {
+  .box__element {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .box__menu {
+    width: calc(33.3% - 2px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .box__menu {
+    width: calc(33.3% - 2px);
+  }
 }
 
 .container {
-  position: absolute;
-  top: 39%;
+  position: relative;
   width: 100%;
+  top: -30px;
 }
 /*# sourceMappingURL=style.css.map */
