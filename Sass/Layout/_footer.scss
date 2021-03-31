@@ -26,9 +26,22 @@
 
 
 
-@media (min-width: 450px){
+@media (min-width: 450px) and (max-width : 1600px){
   .footer{
     text-align: center;
     padding: 15px 0px 15px 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1601px){
+  .footer{
+    background-color: grey;
+    padding: 18px 0px 18px 0px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }

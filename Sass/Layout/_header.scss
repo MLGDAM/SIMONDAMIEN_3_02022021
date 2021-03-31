@@ -10,13 +10,17 @@
 .header1 {
     display: flex;
     justify-content: center;
-    margin: 13px 0px 10px 0px;
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+    padding: 10px 0 10px 0;
 
   &__back {
     font-size: 19px;
     position: absolute;
     left: 20px;
-    top: 18px;
+    top: 13px;
+    max-width: 1440px;
 
     a {
       color: black;

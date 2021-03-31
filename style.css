@@ -65,6 +65,92 @@
 }
 
 /* Couleurs */
+/*Animation du défilement du menu*/
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes appear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.anim-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.anim-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.anim-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.anim-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.anim-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.anim-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.anim-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.anim-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.anim-9 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.anim-10 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+/* Animation du coeur*/
+.fa-heart-animated {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  font-size: 3px;
+  color: blue;
+  font-weight: bold;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -280,10 +366,23 @@ button a {
   color: white;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 450px) and (max-width: 1600px) {
   .footer {
     text-align: center;
     padding: 15px 0px 15px 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1601px) {
+  .footer {
+    background-color: grey;
+    padding: 18px 0px 18px 0px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -307,14 +406,18 @@ button a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 13px 0px 10px 0px;
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  padding: 10px 0 10px 0;
 }
 
 .header1__back {
   font-size: 19px;
   position: absolute;
   left: 20px;
-  top: 18px;
+  top: 13px;
+  max-width: 1440px;
 }
 
 .header1__back a {
@@ -397,6 +500,11 @@ button a {
   font-size: 14px;
 }
 
+.section--restaurants {
+  background-color: whitesmoke;
+  padding-bottom: 25px;
+}
+
 .section--restaurants .resto {
   border-radius: 15px;
   width: 88%;
@@ -432,7 +540,7 @@ button a {
 }
 
 .section--restaurants .resto__subtitle {
-  padding: 8px 22px 0PX 0Px;
+  padding: 8px 22px 0px 0px;
 }
 
 .section--restaurants .resto__new {
@@ -450,6 +558,10 @@ button a {
   position: absolute;
   right: 28px;
   bottom: 30px;
+  font-size: 25px;
+}
+
+.section--restaurants .resto__heart:hover .fa-heart-animated {
   font-size: 25px;
 }
 
@@ -508,9 +620,9 @@ button a {
     margin: 20px auto 20px auto;
   }
   .section--restaurants {
-    width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1440px;
   }
   .section--restaurants .transform {
     display: -webkit-box;
@@ -528,17 +640,17 @@ button a {
 }
 
 /* Page de Détail */
-.main {
+.main--1 {
   padding-bottom: 40px;
   background-color: whitesmoke;
   border-radius: 30px 30px 0px 0px;
 }
 
-.main__image {
+.main--1__image {
   width: 100%;
 }
 
-.main__content {
+.main--1__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -546,20 +658,36 @@ button a {
   -webkit-box-pack: CENTER;
       -ms-flex-pack: CENTER;
           justify-content: CENTER;
-  padding: 20PX 0PX 20PX 0PX;
+  padding: 20px 0px 20px 0px;
 }
 
-.main__content__title {
+.main--1__content__title {
   font-size: 30px;
   font-family: "shrikhand";
   padding: 0px 44px 0px 0px;
 }
 
+.main--1__content__heart  {
+  position: relative;
+  height: 21px;
+}
+
+#heart--icon {
+  position: relative;
+  height: 21px;
+  cursor: pointer;
+}
+
+#heart--icon:hover .fa-heart-animated {
+  font-size: 20px;
+}
+
 @media (min-width: 1025px) {
-  .main {
+  .main--1 {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1440px;
   }
 }
 
@@ -602,7 +730,7 @@ button a {
 
 @media (min-width: 1025px) {
   .subheader__image {
-    height: 50vh;
+    height: 35vh;
   }
 }
 
@@ -647,17 +775,6 @@ button a {
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-@-webkit-keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes load3 {
@@ -718,6 +835,14 @@ button a {
   -webkit-box-shadow: 0 5px 16px #0000002e;
           box-shadow: 0 5px 16px #0000002e;
   position: relative;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .box__contents {
@@ -729,6 +854,10 @@ button a {
 .box__contents:hover .box__check {
   width: 40px;
   border-radius: 0px 10px 10px 0px;
+}
+
+.box__contents:hover .box__contents__left {
+  width: calc(100% - 60px);
 }
 
 .box__contents__title {
@@ -752,6 +881,7 @@ button a {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 82%;
 }
 
 .box__contents__inline__price {
@@ -764,8 +894,7 @@ button a {
   right: 0px;
   top: 0;
   width: 0px;
-  height: 100%;
-  background: lightgreen;
+  background: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -782,6 +911,10 @@ button a {
 
 /*page de détail*/
 @media (min-width: 450px) and (max-width: 767px) {
+  .box__menu__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .box__element {
     width: 350px;
   }
