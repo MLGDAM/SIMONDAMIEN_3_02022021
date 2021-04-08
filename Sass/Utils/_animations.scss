@@ -55,3 +55,30 @@
   font-weight: bold;
   transition-duration: 0.5s;
 }
+
+/* Animation du loader */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation du bloc */
+
+@keyframes off{
+  from {
+  
+    opacity: 90%;
+}
+to {
+  display: none;
+  opacity: 0%;
+  z-index: -1;
+  
+}
+}
+
