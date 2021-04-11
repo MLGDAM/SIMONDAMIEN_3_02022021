@@ -336,7 +336,7 @@ a {
   font-family: "Roboto";
 }
 
-button {
+.button {
   background-image: linear-gradient(135deg, #FF79DA, #9356DC);
   border-radius: 20px;
   height: 40px;
@@ -350,9 +350,14 @@ button {
   margin-top: 40px;
 }
 
-button a {
+.button--text {
   color: white;
-  padding: 10px;
+  text-align: center;
+  padding-top: 11px;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .footer {

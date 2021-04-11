@@ -1,4 +1,4 @@
-button{
+.button{
     background-image: linear-gradient(135deg,$secondaire,$primaire) ;
     border-radius: 20px;
     height: 40px;
@@ -10,10 +10,14 @@ button{
     margin-right: auto;
     margin-top: 40px;
 
-
-     a{
-        color: white;
-        padding : 10px;
-
+    &--text{
+      color: white;
+      text-align: center;
+    padding-top: 11px;
+    }
+    
+    &:hover{
+      cursor: pointer;
     }
 }
+ 
