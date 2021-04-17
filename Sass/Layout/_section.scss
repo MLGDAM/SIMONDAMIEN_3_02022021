@@ -1,3 +1,5 @@
+/* SECTIONS DE LA PAGE PRINCIPALE */
+
 .section {
     &__title {
       padding: 28px 0px 8px 26px;
@@ -49,8 +51,8 @@
     }
   
     &--restaurants {
-      background-color: whitesmoke;
-      padding-bottom: 25px;
+      background-color: #99e2d029;;
+      padding-bottom: 45px;
       .resto {
         border-radius: 15px;
         width: 88%;
@@ -85,10 +87,10 @@
           position: absolute;
           top: 13px;
           right: 8px;
-          background: LIGHTGREY;
+          background: #99E2D0;
           padding: 4px 13px;
           font-size: 14px;
-          color: MEDIUMSEAGREEN;
+          color: #369658;
           font-weight: 800;
         }
         &__heart {

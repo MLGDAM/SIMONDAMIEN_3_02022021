@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*LOADER*/
+/*LOADER DE LA PAGE PRINCIPALE*/
 .bloc {
   background-color: white;
   width: 100%;
@@ -120,8 +120,8 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 0;
-  font-size: 3px;
-  color: blue;
+  font-size: 0px;
+  color: #9356DC;
   font-weight: bold;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -168,6 +168,24 @@
     display: none;
     opacity: 0%;
     z-index: -1;
+  }
+}
+
+/* Animation du bouton */
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -314,6 +332,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/*POLICES*/
 @font-face {
   font-family: "Roboto";
   src: url("Polices/Roboto/Roboto-Regular-webfont.ttf");
@@ -324,10 +343,6 @@ body {
   src: url("Polices/shrikhand/Shrikhand-Regular.ttf");
 }
 
-#body {
-  text-align: center;
-}
-
 h1,
 h2,
 h3,
@@ -336,6 +351,7 @@ a {
   font-family: "Roboto";
 }
 
+/* BOUTON */
 .button {
   background-image: linear-gradient(135deg, #FF79DA, #9356DC);
   border-radius: 20px;
@@ -350,19 +366,24 @@ a {
   margin-top: 40px;
 }
 
-.button--text {
+.button__text {
   color: white;
   text-align: center;
-  padding-top: 11px;
 }
 
 .button:hover {
   cursor: pointer;
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+          animation: flash 1.5s;
+  -webkit-box-shadow: 5px 15px 21px #00000080;
+          box-shadow: 5px 15px 21px #00000080;
 }
 
 .footer {
-  background-color: grey;
+  background-color: #2c423d;
   padding: 18px 0px 18px 24px;
+  margin-top: -30px;
 }
 
 .footer a {
@@ -382,15 +403,16 @@ a {
   margin-bottom: 8px;
 }
 
-.footer__content__link1 {
-  padding-left: 7px;
-}
-
 .footer__content .fas {
   margin-right: 10px;
   color: white;
 }
 
+.footer__content .icon {
+  font-size: 10px;
+}
+
+/* RESPONSIVE */
 @media (min-width: 450px) and (max-width: 1600px) {
   .footer {
     text-align: center;
@@ -402,7 +424,6 @@ a {
 
 @media (min-width: 1601px) {
   .footer {
-    background-color: grey;
     padding: 18px 0px 18px 0px;
     margin-left: auto;
     margin-right: auto;
@@ -410,6 +431,7 @@ a {
   }
 }
 
+/* HEADER PAGE PRINCIPALE */
 .header {
   padding: 15px 0 8px 0px;
   -webkit-box-shadow: 0 0 16px 0 #0000002e;
@@ -423,6 +445,7 @@ a {
           justify-content: center;
 }
 
+/* HEADER PAGE DE DETAILS */
 .header1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,6 +477,7 @@ a {
   color: black;
 }
 
+/* SECTIONS DE LA PAGE PRINCIPALE */
 .section__title {
   padding: 28px 0px 8px 26px;
   font-weight: 800;
@@ -525,8 +549,8 @@ a {
 }
 
 .section--restaurants {
-  background-color: whitesmoke;
-  padding-bottom: 25px;
+  background-color: #99e2d029;
+  padding-bottom: 45px;
 }
 
 .section--restaurants .resto {
@@ -571,10 +595,10 @@ a {
   position: absolute;
   top: 13px;
   right: 8px;
-  background: LIGHTGREY;
+  background: #99E2D0;
   padding: 4px 13px;
   font-size: 14px;
-  color: MEDIUMSEAGREEN;
+  color: #369658;
   font-weight: 800;
 }
 
@@ -707,6 +731,7 @@ a {
   font-size: 20px;
 }
 
+/* RESPONSIVE */
 @media (min-width: 1025px) {
   .main--1 {
     width: 90%;
@@ -716,6 +741,7 @@ a {
   }
 }
 
+/* SUBHEADER DE LA PAGE DE DETAIL */
 .subheader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,13 +779,14 @@ a {
   color: black;
 }
 
+/* RESPONSIVE*/
 @media (min-width: 1025px) {
   .subheader__image {
     height: 35vh;
   }
 }
 
-/*LOADER*/
+/*LOADER DE LA PAGE PRINCIPALE*/
 .bloc {
   background-color: white;
   width: 100%;
@@ -800,8 +827,9 @@ a {
           animation-duration: 3s;
 }
 
+/* HERO DE LA PAGE PRINCIPALE */
 .hero {
-  background: whitesmoke;
+  background: #99e2d029;
   margin-top: 0px;
   margin: -16px 0 0 0;
   padding-bottom: 40px;
@@ -869,7 +897,7 @@ a {
 }
 
 .box__contents:hover .box__contents__left {
-  width: calc(100% - 60px);
+  width: calc(100% - 40px);
 }
 
 .box__contents__title {
@@ -880,6 +908,8 @@ a {
   width: 100%;
   padding: 0.8em;
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .box__contents__inline {
@@ -954,6 +984,7 @@ a {
   }
 }
 
+/* CONTAINER DE LA PAGE DE DETAIL */
 .container {
   position: relative;
   width: 100%;

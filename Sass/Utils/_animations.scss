@@ -1,5 +1,3 @@
-
-
 /*Animation du défilement du menu*/
 
 @keyframes appear {
@@ -45,13 +43,14 @@
 }
 
 /* Animation du coeur*/
+
 .fa-heart-animated {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  font-size: 3px;
-  color: blue;
+  font-size: 0px;
+  color: #9356DC;
   font-weight: bold;
   transition-duration: 0.5s;
 }
@@ -82,3 +81,13 @@ to {
 }
 }
 
+/* Animation du bouton */
+
+@keyframes flash {
+  0% {
+      opacity: 0.2;
+  }
+  100% {
+      opacity: 1;
+  }
+}

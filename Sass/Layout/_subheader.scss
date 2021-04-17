@@ -1,3 +1,5 @@
+/* SUBHEADER DE LA PAGE DE DETAIL */
+
 .subheader{
  
     display: flex;
@@ -29,6 +31,8 @@
     
         }
 }
+
+/* RESPONSIVE*/ 
 
 @media (min-width: 1025px){
     .subheader{
